@@ -1,0 +1,27 @@
+{
+  "name": "paginavoley",
+  "version": "1.0.0",
+  "description": "Plataforma de Torneo de Voleibol para 12 Equipos con React.js y PostgreSQL",
+  "main": "server/index.js",
+  "scripts": {
+    "server": "node server/index.js",
+    "server:watch": "nodemon server/index.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"node server/index.js\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/index.js"
+  },
+  "keywords": ["volleyball", "tournament", "react", "postgresql", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
